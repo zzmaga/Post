@@ -1,0 +1,11 @@
+1    {% extends 'base.html' %}
+2    
+3    {% block content %}
+4      {% for post in object_list %}
+5        <div class="post-entry">
+6          <h2><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></h2>
+7          <p>{{ post.body }}</p>
+8        </div>
+9      {% endfor %}
+10   {% endblock content %}
+
